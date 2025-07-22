@@ -1,45 +1,10 @@
-
-<style>
-body {
-    text-align: center;
-
-}
-    h1 {
-    color: #88B04B;
-    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-    font-weight: 900;
-    font-size: 40px;
-    margin-bottom: 10px;
-    }
-    p {
-    color: #404F5E;
-    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-    font-size:20px;
-    margin: 0;
-    }
-i {
-    color: #9ABC66;
-    font-size: 100px;
-    line-height: 200px;
-    margin-left:-15px;
-}
-.card {
-    background: white;
-    padding: 60px;
-    border-radius: 4px;
-    box-shadow: 0 2px 3px #C8D0D8;
-    display: inline-block;
-    margin: 0 auto;
-}
-</style>
-   <body>
-  <div class="card mt-5">
-  <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-    <i class="checkmark">✓</i>
+<div class="container d-flex justify-content-center align-items-center margin-top-custom">
+  <div class="card text-center p-5 shadow-lg">
+    <div class="rounded-circle mx-auto d-flex justify-content-center align-items-center" style="height: 150px; width: 150px; background-color: #eef2fb;">
+      <i class="checkmark">✓</i>
+    </div>
+    <h1 class="mt-4 text-azul fw-bold">¡Listo!</h1> 
+    <p class="text-secondary fs-5">Formulario registrado correctamente</p>
+    <a href="<?php echo base_url();?>welcome" class="btn btn-login mt-4 px-4">Volver</a>
   </div>
-    <h1>Listo!</h1> 
-    <p>Formulario registrado correctamente<br/></p>
-    <a href="<?php echo base_url();?>welcome" class="btn btn-success mt-3">Volver</a>
-  </div>
-</body>
-</html>
+</div>

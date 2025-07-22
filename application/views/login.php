@@ -1,61 +1,42 @@
+<section class="h-100 bg-azul-fondo d-flex align-items-center">
 
-<section class="h-100">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
 
-		<div class="container h-100 my-5">
-    
-			<div class="row justify-content-sm-center h-100">
-               
-				<div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
-				
-                    <?php
-                        if($this->session->flashdata('logout')){
-                            echo '<div class="alert alert-success" role="alert">';
-                            echo $this->session->flashdata('logout');
-                            echo '</div>';
-                        }
-                     ?>       
-					<div class="card shadow-lg">
-						<div class="card-body p-5">
-							<img src="<?php echo base_url(); ?>logo.png" alt="San José de Mayo" class="img-fluid mb-4">
-							<h1 class="fs-4 card-title fw-bold mb-4 text-center">Iniciar sesion</h1>
-                            <?php
+                <?php if ($this->session->flashdata('logout')): ?>
+                    <div class="alert alert-success"><?= $this->session->flashdata('logout') ?></div>
+                <?php endif; ?>
 
-                          
+                <div class="card card-login">
+                    <div class="card-body">
+                        <img src="<?= base_url(); ?>public_images/logo.png" alt="San José de Mayo" class="img-fluid mb-4 d-block mx-auto" style="max-height: 100px;">
+                        <h1 class="fs-4 fw-bold mb-4 text-center">Iniciar sesión</h1>
 
-                            if($this->session->flashdata('error')){
-                                $error = $this->session->flashdata('error');
-                                echo '<div class="alert alert-danger" role="alert">'.$error.'</div>';
-                            }
-                            ?>
-							<form method="POST" action="<?php echo base_url();?>welcome/login" class="needs-validation" novalidate="" autocomplete="off">
-								<div class="mb-3">
-									<label class="mb-2 text-muted" for="username">Usuario</label>
-									<input id="username" type="text" class="form-control" name="username" value="" required autofocus>
-								</div>
+                        <?php if ($this->session->flashdata('error')): ?>
+                            <div class="alert alert-danger"><?= $this->session->flashdata('error') ?></div>
+                        <?php endif; ?>
 
-								<div class="mb-3">
-									<div class="mb-2 w-100">
-										<label class="text-muted" for="password">Contraseña</label>
-									</div>
-									<input id="password" type="password" class="form-control" name="password" required>
-								</div>
+                        <form method="POST" action="<?= base_url(); ?>welcome/login" class="needs-validation" novalidate autocomplete="off">
+                            <div class="mb-3">
+                                <label class="form-label text-muted" for="username">Usuario</label>
+                                <input id="username" type="text" class="form-control input-focus" name="username" required autofocus>
+                            </div>
 
-	
+                            <div class="mb-4">
+                                <label class="form-label text-muted" for="password">Contraseña</label>
+                                <input id="password" type="password" class="form-control input-focus" name="password" required>
+                            </div>
 
-								<div class="d-flex align-items-center justify-content-center">
-                                    <button type="submit" class="btn btn-primary">
-                                    Iniciar sesion
-                                    </button>
-								</div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-login">Iniciar sesión</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
 
-							</form>
-						</div>
-			
-					</div>
-					
-				</div>
-			</div>
-		</div>
-	</section>
-</body>
-</html>
+            </div>
+        </div>
+    </div>
+
+</section>
