@@ -7,28 +7,28 @@
         <form id="regForm" method="POST" action="<?php echo base_url();?>welcome/formulario">
 
           <div class="mb-3">
-            <label for="cedula" class="form-label">Cédula</label>
-            <input type="text" class="form-control input-focus" id="cedula" name="cedula" required>
+            <label for="cedula" class="form-label">Cédula (opcional)</label>
+            <input type="text" class="form-control input-focus" id="cedula" name="cedula">
           </div>
 
           <div class="mb-3">
-            <label for="telefono" class="form-label">Teléfono</label>
+            <label for="telefono" class="form-label">Teléfono*</label>
             <input type="text" class="form-control input-focus" id="telefono" name="telefono" required>
           </div>
 
           <div class="row">
             <div class="col-md-6 mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
+              <label for="nombre" class="form-label">Nombre*</label>
               <input type="text" class="form-control input-focus" id="nombre" name="nombre" required>
             </div>
             <div class="col-md-6 mb-3">
-              <label for="apellido" class="form-label">Apellido</label>
+              <label for="apellido" class="form-label">Apellido*</label>
               <input type="text" class="form-control input-focus" id="apellido" name="apellido" required>
             </div>
           </div>
 
           <div class="mb-3">
-            <label class="form-label">Dirección</label>
+            <label class="form-label">Dirección*</label>
             <select class="form-select input-focus" name="direccion">
               <option selected disabled>Seleccione una dirección</option>
               <option value="Administración general">Administración general</option>

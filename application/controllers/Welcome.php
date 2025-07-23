@@ -66,6 +66,8 @@ class Welcome extends CI_Controller {
 		$info = array(
 			'cedula' => $cedula,
 			'direccion' => $direccion,
+			'nombre' => $nombre,
+			'apellido' => $apellido,
 			'tipo' => $tipo,
 			'fecha' => $fecha,
 			'hora' => $hora,
@@ -88,7 +90,9 @@ class Welcome extends CI_Controller {
 		} */
 		// Esto es codigo viejo, ya no funciona ni hace falta. Registrar persona hace createOrUpdate a la nueva API
 
-		$this->persona_model->registrar_persona($cedula, $nombre, $apellido, $telefono);
+		if ($cedula) {
+			$this->persona_model->registrar_persona($cedula, $nombre, $apellido, $telefono);
+		}
 
 		redirect("welcome/exito");
 	}
