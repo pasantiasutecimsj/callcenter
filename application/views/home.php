@@ -29,7 +29,7 @@
 
           <div class="mb-3">
             <label class="form-label">Dirección*</label>
-            <select class="form-select input-focus" name="direccion">
+            <select class="form-select input-focus" name="direccion" required>
               <option selected disabled>Seleccione una dirección</option>
               <option value="Administración general">Administración general</option>
               <option value="Administracion de hacienda">Administración de hacienda</option>
